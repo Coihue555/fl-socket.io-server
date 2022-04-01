@@ -17,10 +17,11 @@
         });
 
         socket.on('disconnect', function(){
-            console.log('Desconectado al servidor')
+            console.log('Desconectado del servidor')
         });
 
-        socket.emit('mensaje', {nombre: 'Elliot'})
+        socket.emit('mensaje', {nombre: 'Andy'});
+        
         socket.on('mensaje', function(payload){
             console.log('Escuchando: ', payload )
         } )

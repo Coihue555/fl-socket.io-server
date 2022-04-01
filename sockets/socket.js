@@ -19,10 +19,10 @@ io.on('connection', client => {
     })
 
     client.on('emitir-mensaje', (payload)=> {
-        console.log('Mensajeeee', payload);
+        //console.log('Mensajeeee', payload);
 
-        io.emit('nuevo-mensaje', payload ); //emite a todos incluido el emisor
-        //client.broadcast.emit('nuevo-mensaje', 'Heyyy' ); //emite a todos menos al emisor
+        //io.emit('nuevo-mensaje', payload ); //emite a todos incluido el emisor
+        client.broadcast.emit('nuevo-mensaje', payload ); //emite a todos menos al emisor
     })
 
   });
